@@ -1,0 +1,5 @@
+.x-dataview-selected {
+  @include background-gradient($list-active-color, $list-active-gradient);
+  @include color-by-background($list-active-color);
+  @include bevel-by-background($list-active-color);
+}
