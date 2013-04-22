@@ -165,6 +165,14 @@ Ext.define('MusicTube.controller.PlayList', {
 						controller.addNewList();
 					}
 				},{
+					text: 'Open AudioPlayer',
+					handler: function() {
+						_this.actionSheet.hide();
+						var socialUtil = Ext.getCmp('socialUtil');
+						socialUtil.openAudioPlayer();
+//						socialUtil.makeTwitter();
+					}
+				},{
 					text: 'Tweet List',
 					handler: function() {
 						_this.actionSheet.hide();

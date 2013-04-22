@@ -16,10 +16,18 @@ Ext.define('MusicTube.util.Social', {
 	},
 	makeMusicLink: function() {
 		try {
-			var settingUtil = Ext.getCmp('settingUtil');
+//			var settingUtil = Ext.getCmp('settingUtil');
 			var playListUtil = Ext.getCmp('playListUtil');
-			var list = settingUtil.getCurrentList();
+//			var list = settingUtil.getCurrentList();
 			return location.href.split('#')[0] + '#list/' + playListUtil.getListData();
+		}
+		catch(e) {
+		}
+	},
+	openAudioPlayer: function(){
+		try {
+			var playListUtil = Ext.getCmp('playListUtil');
+			Ext.getCmp('linkUtil').openWindow('http://taktodtools.appspot.com/audioPlayer/#list/' + playListUtil.getListData());
 		}
 		catch(e) {
 		}
